@@ -7,5 +7,7 @@ COPY yarn.lock ./
 RUN yarn
 COPY . .
 RUN chmod +x /usr/src/app/wait-for-it.sh
-EXPOSE 4000
+
 RUN yarn build
+EXPOSE 5000
+CMD ["0.0.0.0:5000"]
